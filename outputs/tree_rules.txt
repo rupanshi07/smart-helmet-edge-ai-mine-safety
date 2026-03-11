@@ -1,0 +1,356 @@
+Decision Tree Rules (depth=11)
+Train Accuracy: 96.80%
+Test  Accuracy: 93.18%
+Nodes: 233
+
+Class mapping: {0: 'EMERGENCY', 1: 'NORMAL', 2: 'WARNING'}
+
+|--- gas_ppm <= 1300.10
+|   |--- temperature_C <= 36.50
+|   |   |--- acc_resultant_g <= 3.28
+|   |   |   |--- temperature_C <= 35.50
+|   |   |   |   |--- acc_y_g <= -2.13
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- acc_y_g >  -2.13
+|   |   |   |   |   |--- humidity_pct <= 91.50
+|   |   |   |   |   |   |--- acc_z_g <= -2.33
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- acc_z_g >  -2.33
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- humidity_pct >  91.50
+|   |   |   |   |   |   |--- acc_z_g <= -1.47
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- acc_z_g >  -1.47
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |--- temperature_C >  35.50
+|   |   |   |   |--- gyro_x_dps <= 30.31
+|   |   |   |   |   |--- acc_x_g <= 0.40
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- acc_x_g >  0.40
+|   |   |   |   |   |   |--- acc_resultant_g <= 1.46
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- acc_resultant_g >  1.46
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- gyro_x_dps >  30.31
+|   |   |   |   |   |--- class: 2
+|   |   |--- acc_resultant_g >  3.28
+|   |   |   |--- gyro_y_dps <= -45.34
+|   |   |   |   |--- humidity_pct <= 90.00
+|   |   |   |   |   |--- class: 2
+|   |   |   |   |--- humidity_pct >  90.00
+|   |   |   |   |   |--- class: 2
+|   |   |   |--- gyro_y_dps >  -45.34
+|   |   |   |   |--- temperature_C <= 31.50
+|   |   |   |   |   |--- gyro_z_dps <= -70.10
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- gyro_z_dps >  -70.10
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- temperature_C >  31.50
+|   |   |   |   |   |--- gyro_y_dps <= 35.36
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- gyro_y_dps >  35.36
+|   |   |   |   |   |   |--- class: 2
+|   |--- temperature_C >  36.50
+|   |   |--- temperature_C <= 38.50
+|   |   |   |--- acc_resultant_g <= 2.48
+|   |   |   |   |--- gas_ppm <= 1045.40
+|   |   |   |   |   |--- gyro_resultant_dps <= 39.46
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- gyro_resultant_dps >  39.46
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |--- gas_ppm >  1045.40
+|   |   |   |   |   |--- humidity_pct <= 86.00
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- humidity_pct >  86.00
+|   |   |   |   |   |   |--- acc_x_g <= -0.62
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- acc_x_g >  -0.62
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |--- acc_resultant_g >  2.48
+|   |   |   |   |--- acc_y_g <= 0.68
+|   |   |   |   |   |--- class: 2
+|   |   |   |   |--- acc_y_g >  0.68
+|   |   |   |   |   |--- class: 2
+|   |   |--- temperature_C >  38.50
+|   |   |   |--- gas_ppm <= 963.55
+|   |   |   |   |--- acc_resultant_g <= 1.90
+|   |   |   |   |   |--- temperature_C <= 42.50
+|   |   |   |   |   |   |--- gyro_y_dps <= 3.89
+|   |   |   |   |   |   |   |--- acc_x_g <= -0.09
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- acc_x_g >  -0.09
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |--- gyro_y_dps >  3.89
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- temperature_C >  42.50
+|   |   |   |   |   |   |--- temperature_C <= 44.50
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- temperature_C >  44.50
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- acc_resultant_g >  1.90
+|   |   |   |   |   |--- temperature_C <= 39.50
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- temperature_C >  39.50
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |--- gas_ppm >  963.55
+|   |   |   |   |--- temperature_C <= 39.50
+|   |   |   |   |   |--- gas_ppm <= 1112.15
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- gas_ppm >  1112.15
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- temperature_C >  39.50
+|   |   |   |   |   |--- class: 2
+|--- gas_ppm >  1300.10
+|   |--- temperature_C <= 43.50
+|   |   |--- gas_ppm <= 2900.90
+|   |   |   |--- temperature_C <= 30.50
+|   |   |   |   |--- acc_resultant_g <= 1.78
+|   |   |   |   |   |--- gas_ppm <= 2778.05
+|   |   |   |   |   |   |--- gyro_y_dps <= -12.94
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- gyro_y_dps >  -12.94
+|   |   |   |   |   |   |   |--- humidity_pct <= 90.50
+|   |   |   |   |   |   |   |   |--- gas_ppm <= 2613.90
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- gas_ppm >  2613.90
+|   |   |   |   |   |   |   |   |   |--- gas_ppm <= 2649.65
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- gas_ppm >  2649.65
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- humidity_pct >  90.50
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- gas_ppm >  2778.05
+|   |   |   |   |   |   |--- gas_ppm <= 2856.55
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- gas_ppm >  2856.55
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |--- acc_resultant_g >  1.78
+|   |   |   |   |   |--- gyro_resultant_dps <= 182.15
+|   |   |   |   |   |   |--- gas_ppm <= 1614.60
+|   |   |   |   |   |   |   |--- gyro_y_dps <= 18.53
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- gyro_y_dps >  18.53
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- gas_ppm >  1614.60
+|   |   |   |   |   |   |   |--- gyro_z_dps <= 14.83
+|   |   |   |   |   |   |   |   |--- humidity_pct <= 80.00
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- humidity_pct >  80.00
+|   |   |   |   |   |   |   |   |   |--- gyro_z_dps <= -9.55
+|   |   |   |   |   |   |   |   |   |   |--- gyro_y_dps <= -6.33
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- gyro_y_dps >  -6.33
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- gyro_z_dps >  -9.55
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- gyro_z_dps >  14.83
+|   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- gyro_resultant_dps >  182.15
+|   |   |   |   |   |   |--- acc_x_g <= -2.18
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- acc_x_g >  -2.18
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |--- temperature_C >  30.50
+|   |   |   |   |--- acc_resultant_g <= 3.40
+|   |   |   |   |   |--- temperature_C <= 33.50
+|   |   |   |   |   |   |--- gas_ppm <= 1899.15
+|   |   |   |   |   |   |   |--- acc_resultant_g <= 2.54
+|   |   |   |   |   |   |   |   |--- gas_ppm <= 1632.65
+|   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |--- gas_ppm >  1632.65
+|   |   |   |   |   |   |   |   |   |--- humidity_pct <= 84.50
+|   |   |   |   |   |   |   |   |   |   |--- gyro_z_dps <= -10.16
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- gyro_z_dps >  -10.16
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- humidity_pct >  84.50
+|   |   |   |   |   |   |   |   |   |   |--- acc_resultant_g <= 1.64
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- acc_resultant_g >  1.64
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |--- acc_resultant_g >  2.54
+|   |   |   |   |   |   |   |   |--- gas_ppm <= 1574.30
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- gas_ppm >  1574.30
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- gas_ppm >  1899.15
+|   |   |   |   |   |   |   |--- gas_ppm <= 2240.35
+|   |   |   |   |   |   |   |   |--- humidity_pct <= 84.50
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- humidity_pct >  84.50
+|   |   |   |   |   |   |   |   |   |--- acc_y_g <= -0.16
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- acc_y_g >  -0.16
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- gas_ppm >  2240.35
+|   |   |   |   |   |   |   |   |--- gyro_x_dps <= -13.03
+|   |   |   |   |   |   |   |   |   |--- gas_ppm <= 2527.45
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- gas_ppm >  2527.45
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- gyro_x_dps >  -13.03
+|   |   |   |   |   |   |   |   |   |--- gas_ppm <= 2308.80
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- gas_ppm >  2308.80
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- temperature_C >  33.50
+|   |   |   |   |   |   |--- gas_ppm <= 2409.75
+|   |   |   |   |   |   |   |--- gyro_resultant_dps <= 163.19
+|   |   |   |   |   |   |   |   |--- humidity_pct <= 77.50
+|   |   |   |   |   |   |   |   |   |--- gyro_resultant_dps <= 37.46
+|   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |--- gyro_resultant_dps >  37.46
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- humidity_pct >  77.50
+|   |   |   |   |   |   |   |   |   |--- gas_ppm <= 1362.20
+|   |   |   |   |   |   |   |   |   |   |--- temperature_C <= 35.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |   |   |   |   |   |--- temperature_C >  35.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- gas_ppm >  1362.20
+|   |   |   |   |   |   |   |   |   |   |--- temperature_C <= 42.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |   |--- temperature_C >  42.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- gyro_resultant_dps >  163.19
+|   |   |   |   |   |   |   |   |--- acc_y_g <= -1.07
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- acc_y_g >  -1.07
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- gas_ppm >  2409.75
+|   |   |   |   |   |   |   |--- temperature_C <= 41.50
+|   |   |   |   |   |   |   |   |--- acc_resultant_g <= 1.88
+|   |   |   |   |   |   |   |   |   |--- gyro_z_dps <= 4.34
+|   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |   |--- gyro_z_dps >  4.34
+|   |   |   |   |   |   |   |   |   |   |--- gyro_z_dps <= 6.51
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |   |   |--- gyro_z_dps >  6.51
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- acc_resultant_g >  1.88
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- temperature_C >  41.50
+|   |   |   |   |   |   |   |   |--- humidity_pct <= 87.50
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |   |--- humidity_pct >  87.50
+|   |   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- acc_resultant_g >  3.40
+|   |   |   |   |   |--- temperature_C <= 37.50
+|   |   |   |   |   |   |--- humidity_pct <= 88.50
+|   |   |   |   |   |   |   |--- gas_ppm <= 1699.05
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- gas_ppm >  1699.05
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- humidity_pct >  88.50
+|   |   |   |   |   |   |   |--- gas_ppm <= 2017.65
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- gas_ppm >  2017.65
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- temperature_C >  37.50
+|   |   |   |   |   |   |--- gas_ppm <= 2177.25
+|   |   |   |   |   |   |   |--- humidity_pct <= 90.50
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- humidity_pct >  90.50
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- gas_ppm >  2177.25
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |--- gas_ppm >  2900.90
+|   |   |   |--- temperature_C <= 34.50
+|   |   |   |   |--- temperature_C <= 31.50
+|   |   |   |   |   |--- gas_ppm <= 3846.85
+|   |   |   |   |   |   |--- gas_ppm <= 3107.60
+|   |   |   |   |   |   |   |--- gyro_resultant_dps <= 61.62
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- gyro_resultant_dps >  61.62
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- gas_ppm >  3107.60
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- gas_ppm >  3846.85
+|   |   |   |   |   |   |--- temperature_C <= 30.50
+|   |   |   |   |   |   |   |--- gyro_x_dps <= 159.87
+|   |   |   |   |   |   |   |   |--- acc_x_g <= -1.62
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- acc_x_g >  -1.62
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- gyro_x_dps >  159.87
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- temperature_C >  30.50
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- temperature_C >  31.50
+|   |   |   |   |   |--- gas_ppm <= 3844.45
+|   |   |   |   |   |   |--- acc_resultant_g <= 4.91
+|   |   |   |   |   |   |   |--- gyro_y_dps <= 39.81
+|   |   |   |   |   |   |   |   |--- humidity_pct <= 82.50
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |   |--- humidity_pct >  82.50
+|   |   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |   |--- gyro_y_dps >  39.81
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- acc_resultant_g >  4.91
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- gas_ppm >  3844.45
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |--- temperature_C >  34.50
+|   |   |   |   |--- gyro_resultant_dps <= 55.68
+|   |   |   |   |   |--- temperature_C <= 36.50
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- temperature_C >  36.50
+|   |   |   |   |   |   |--- humidity_pct <= 83.50
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- humidity_pct >  83.50
+|   |   |   |   |   |   |   |--- acc_x_g <= 0.09
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- acc_x_g >  0.09
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- gyro_resultant_dps >  55.68
+|   |   |   |   |   |--- temperature_C <= 35.50
+|   |   |   |   |   |   |--- gyro_y_dps <= 53.19
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- gyro_y_dps >  53.19
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- temperature_C >  35.50
+|   |   |   |   |   |   |--- acc_resultant_g <= 2.02
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- acc_resultant_g >  2.02
+|   |   |   |   |   |   |   |--- class: 0
+|   |--- temperature_C >  43.50
+|   |   |--- gas_ppm <= 1930.30
+|   |   |   |--- gyro_y_dps <= 8.46
+|   |   |   |   |--- gas_ppm <= 1560.55
+|   |   |   |   |   |--- class: 2
+|   |   |   |   |--- gas_ppm >  1560.55
+|   |   |   |   |   |--- acc_y_g <= 0.32
+|   |   |   |   |   |   |--- gas_ppm <= 1762.65
+|   |   |   |   |   |   |   |--- gyro_z_dps <= -7.75
+|   |   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |   |--- gyro_z_dps >  -7.75
+|   |   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- gas_ppm >  1762.65
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- acc_y_g >  0.32
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |--- gyro_y_dps >  8.46
+|   |   |   |   |--- temperature_C <= 45.50
+|   |   |   |   |   |--- class: 2
+|   |   |   |   |--- temperature_C >  45.50
+|   |   |   |   |   |--- humidity_pct <= 86.50
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- humidity_pct >  86.50
+|   |   |   |   |   |   |--- class: 0
+|   |   |--- gas_ppm >  1930.30
+|   |   |   |--- gas_ppm <= 2407.10
+|   |   |   |   |--- temperature_C <= 44.50
+|   |   |   |   |   |--- humidity_pct <= 90.50
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- humidity_pct >  90.50
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- temperature_C >  44.50
+|   |   |   |   |   |--- gas_ppm <= 1974.40
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- gas_ppm >  1974.40
+|   |   |   |   |   |   |--- acc_resultant_g <= 1.14
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- acc_resultant_g >  1.14
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |--- gas_ppm >  2407.10
+|   |   |   |   |--- class: 0
